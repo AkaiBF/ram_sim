@@ -1,8 +1,13 @@
 class Aluc {
-    int irPointer;
-    int mrPointer;
-    int inputPointer;
-    int outputPointer;
+  private int irPointer;
+  private int mrPointer;
+  private int inputPointer;
+  private int outputPointer;
     
-    
+  public Aluc() {
+    irPointer = 0;
+    mrPointer = 0;
+    inputPointer = 0;
+    outputPointer = 0;
+  }
 }

@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <stdio.h>
+#include <cstring>
 #include "instruction.hpp"
 
 class ir{
@@ -13,4 +15,5 @@ class ir{
     void insert(string cadena_instruccion);
     instruction get(int i);
     
+    void load_file(string nombre_fich);
 };
