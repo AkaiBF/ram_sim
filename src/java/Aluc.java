@@ -9,5 +9,8 @@ class Aluc {
     mrPointer = 0;
     inputPointer = 0;
     outputPointer = 0;
+  
+    //public void addOrder(Integer int, Mr memoryRegister)
+    
   }
 }

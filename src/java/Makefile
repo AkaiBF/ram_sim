@@ -6,6 +6,7 @@ JC = javac
 
 CLASSES = \
 	Instruction.java \
+	Etiqueta.java \
 	Mr.java \
 	Ir.java \
 	InputVector.java \

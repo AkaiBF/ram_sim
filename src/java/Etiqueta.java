@@ -22,4 +22,12 @@ public class Etiqueta {
   public int getLine() {
     return line;
   }
+  
+  public String getNombre() {
+    return nombre;
+  }
+  
+  public int getCode() {
+    return code;
+  }
 }

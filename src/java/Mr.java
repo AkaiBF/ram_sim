@@ -5,6 +5,7 @@ public class Mr {
   
   public Mr() {
     memoryRegister = new ArrayList<Integer>();
+    memoryRegister.add(0);
   }
   
   public void insert(Integer entero) {
@@ -17,5 +18,9 @@ public class Mr {
   
   public Integer get(int index) {
     return memoryRegister.get(index);
+  }
+  
+  public void addOrder(Integer numero) {
+    memoryRegister.set(0, memoryRegister.get(0) + numero);
   }
 }

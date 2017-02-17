@@ -5,4 +5,5 @@ me
 trabe 
 LOAD 23
 STORE *24
+JUMP me
 HALT

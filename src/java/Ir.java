@@ -26,7 +26,7 @@ public class Ir {
   public String toString() {
     String salida = new String();
     for(int i = 0; i < listaInstrucciones.size(); i++) {
-      salida = salida + "\n" + listaInstrucciones.get(i);
+      salida = salida + listaInstrucciones.get(i) + "\n";
     }
     return salida;
   }
