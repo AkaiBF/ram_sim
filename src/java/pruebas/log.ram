@@ -1,0 +1,31 @@
+# Programa Logaritmo
+# Este programa calcula el logaritmo en base n de x, con n y x escritos en un fichero.
+#
+# Ernesto Echeverría González
+# alu0100881622@ull.edu.es
+
+# Cargamos base
+            READ 1
+# Cargamos argumento 
+            READ 2
+            LOAD 1
+# Guardamos un acumulador de la base elevado a i
+            STORE 3
+            LOAD =0
+# Inicializamos y guardamos i
+            STORE 4
+# Mientras nuestro argumento sea mayor que el acumulador potencia
+bucle:      LOAD 2
+            DIV 3
+            JZERO obtenido
+# Multiplicamos el acumulador por la base y sumamos una iteración
+            LOAD 3
+            MUL 1
+            STORE 3
+            LOAD 4
+            ADD =1
+            STORE 4
+            JUMP bucle
+# Escribimos el número de iteraciones
+obtenido:   WRITE 4
+            HALT

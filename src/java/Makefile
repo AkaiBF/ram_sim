@@ -7,6 +7,7 @@ JC = javac
 CLASSES = \
 	Instruction.java \
 	Etiqueta.java \
+	Aluc.java \
 	Mr.java \
 	Ir.java \
 	InputVector.java \
@@ -18,4 +19,4 @@ default: classes
 classes: $(CLASSES:.java=.class)
 
 clean:
-	$(RM) *.class
+	$(RM) *.class *.out

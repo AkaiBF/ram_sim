@@ -1,8 +1,25 @@
+/**
+ * <H1>Clase Aluc</H1>
+ * 
+ * Esta clase es la encargada del correcto funcionamiento de cada instrucción,
+ * así como la asignación de la siguiente ordena a ejecutar. Es teóricamente
+ * una mezcla entre una ALU (unidad aritmético lógica) y una UC (unidad de control).
+ * 
+ * Para más información contacte con el usuario vía e-mail:
+ * alu0100881622@ull.edu.es
+ * 
+ * @author Ernesto Echeverría González
+ * @since 20-02-2017
+ * @version 1.0.0
+ */
 public class Instruction {
   private int type;
   private int addrType;
   private int addr;
   
+  
+  //Prohibir READ 0 y WRITE 0;
+  // Creamos la instrucción con dos Strings: el nombre del comando y su operador
   public Instruction(String code, String operator) {
     
     addrType = 0;
@@ -12,7 +29,7 @@ public class Instruction {
     if(addrType != 0) operator = operator.substring(1);
     
     addr = Integer.parseInt(operator);
-    
+    //Asignamos un número por instrucción
     switch(code) {
       case "LOAD":
       case "load":
@@ -65,6 +82,7 @@ public class Instruction {
       default:
         type = -2;
     }
+    //Limpiamos opciones no válidas
     if((type == 6 || type == 1) && addrType == 1){
       type = -1;
     }
@@ -72,6 +90,7 @@ public class Instruction {
 
   }
   
+  //Getters
   public int getType() {
     return type;
   }
@@ -84,6 +103,7 @@ public class Instruction {
     return addr;
   }
   
+  //Setters
   public void setType(int type) {
     this.type = type;
   }
@@ -96,6 +116,7 @@ public class Instruction {
     this.addr = addr;
   }
   
+  // Método toString
   public String toString() {
     String cad = new String();
     if(type == -1) {
